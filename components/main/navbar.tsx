@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-
-import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
+import { FaYoutube, FaFacebook } from "react-icons/fa";
+import {RxDiscordLogo,RxGithubLogo,RxInstagramLogo,RxTwitterLogo,RxLinkedinLogo,} from "react-icons/rx";
 
 export const Navbar = () => {
   return (
@@ -25,32 +25,65 @@ export const Navbar = () => {
         </Link>
 
         <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.title}
-                href={link.link}
-                className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
-              >
-                {link.title}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-row gap-5">
-          {SOCIALS.map(({ link, name, icon: Icon }) => (
-            <Link
-              href={link}
-              target="_blank"
-              rel="noreferrer noopener"
-              key={name}
-            >
-              <Icon className="h-6 w-6 text-white" />
-            </Link>
-          ))}
-        </div>
+      <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
+        {[
+          {
+            title: "About me",
+            link: "/#about-me",
+          },
+          {
+            title: "SDG",
+            link: "/sdg",
+          },
+          {
+            title: "Skills",
+            link: "/#skills",
+          },
+          {
+            title: "Projects",
+            link: "/#projects",
+          },
+        ].map((link) => (
+          <Link
+            key={link.title}
+            href={link.link}
+            className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
+          >
+            {link.title}
+          </Link>
+        ))}
       </div>
+    </div>
+
+    <div className="flex flex-row gap-5">
+      {[
+        {
+          name: "Instagram",
+          icon: RxInstagramLogo,
+          link: "https://instagram.com",
+        },
+        {
+          name: "Facebook",
+          icon: FaFacebook,
+          link: "https://facebook.com",
+        },
+        {
+          name: "Twitter",
+          icon: RxTwitterLogo,
+          link: "https://twitter.com",
+        },
+      ].map(({ link, name, icon: Icon }) => (
+        <Link
+          href={link}
+          target="_blank"
+          rel="noreferrer noopener"
+          key={name}
+        >
+          <Icon className="h-6 w-6 text-white" />
+        </Link>
+      ))}
+    </div>
+    </div>
     </div>
   );
 };

@@ -88,24 +88,6 @@ export const SKILL_DATA = [
   },
 ] as const;
 
-export const SOCIALS = [
-  {
-    name: "Instagram",
-    icon: RxInstagramLogo,
-    link: "https://instagram.com",
-  },
-  {
-    name: "Facebook",
-    icon: FaFacebook,
-    link: "https://facebook.com",
-  },
-  {
-    name: "Twitter",
-    icon: RxTwitterLogo,
-    link: "https://twitter.com",
-  },
-] as const;
-
 export const FRONTEND_SKILL = [
   {
     skill_name: "HTML",
@@ -339,26 +321,3 @@ export const FOOTER_DATA = [
     ],
   },
 ] as const;
-
-export const NAV_LINKS = [
-  {
-    title: "About me",
-    link: "#about-me",
-  },
-  {
-    title: "SDG",
-    link: "#sdg",
-  },
-  {
-    title: "Skills",
-    link: "#skills",
-  },
-  {
-    title: "Projects",
-    link: "#projects",
-  },
-] as const;
-
-export const LINKS = {
-  sourceCode: "https://github.com/sanidhyy/space-portfolio",
-};
