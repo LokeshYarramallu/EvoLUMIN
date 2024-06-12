@@ -346,6 +346,10 @@ export const NAV_LINKS = [
     link: "#about-me",
   },
   {
+    title: "SDG",
+    link: "#sdg",
+  },
+  {
     title: "Skills",
     link: "#skills",
   },
